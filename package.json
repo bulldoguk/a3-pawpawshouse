@@ -1,13 +1,13 @@
 {
-  "name": "a3-bulldoguk-boilerplate",
+  "name": "a3-pawpawshouse",
   "version": "1.0.0",
-  "description": "Bulldoguk / Apostrophe 3 Boilerplate Site",
+  "description": "PawPawsHouse Apostrophe 3 Version",
   "main": "app.js",
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
-    "build": "NODE_ENV=production PORT=3040 node app @apostrophecms/asset:build",
-    "serve": "NODE_ENV=production PORT=3040 node app",
+    "build": "NODE_ENV=production PORT=3050 node app @apostrophecms/asset:build",
+    "serve": "NODE_ENV=production PORT=3050 node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
   },
   "nodemonConfig": {
@@ -32,9 +32,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bulldoguk/a3-bulldoguk-boilerplate"
+    "url": "https://github.com/bulldoguk/a3-pawpawshouse"
   },
-  "author": "Apostrophe Technologies, Inc. and PawPawsHouse.com",
+  "author": "PawPawsHouse.com",
   "license": "MIT",
   "dependencies": {
     "@apostrophecms/cli": "^3.1.0",

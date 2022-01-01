@@ -25,9 +25,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
-          cd ~/a3-bulldoguk-boilerplate
-          export APOS_RELEASE_ID=boilerplate2021
-          git pull https://github.com/bulldoguk/a3-bulldoguk-boilerplate.git main
+          cd ~/a3-pawpawshouse
+          export APOS_RELEASE_ID=pawpawshouse2022
+          git pull https://github.com/bulldoguk/a3-pawpawshouse.git main
           npm install
           npm run build
           pm2 start
