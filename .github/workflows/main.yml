@@ -28,7 +28,7 @@ jobs:
           cd ~/a3-pawpawshouse
           export APOS_RELEASE_ID=pawpawshouse2022
           git pull https://github.com/bulldoguk/a3-pawpawshouse.git main
-          npm install
+          npm ci
           npm run build
           pm2 start
           pm2 save
