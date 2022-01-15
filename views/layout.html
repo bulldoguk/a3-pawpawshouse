@@ -3,17 +3,17 @@
 
 {% set title = data.piece.title or data.page.title %}
 {% block title %}
-  {{ title }}
+  {{ data.global.maintitle }} | {{ title }}
   {% if not title %}
     {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
   {% endif %}
 {% endblock %}
 
 {% block extraHead %}
-  {# breadcrumb richtext code #}
   {% include "pageHead/logoRichText.html" %}
   {% include "pageHead/searchRichText.html" %}
   {% include "pageHead/breadcrumbRichText.html" %}
+  <script src="https://use.fontawesome.com/df65368697.js"></script>
 {% endblock %}
 
 {% block beforeMain %}

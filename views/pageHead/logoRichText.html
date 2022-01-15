@@ -1,8 +1,11 @@
+{% set imageObject = apos.attachment.first(data.global.logo.items) %}
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "url": "{{ data.baseUrl }}",
-      "logo": "{{ data.baseUrl }}/images/icon.png"
+      "logo": "{{ apos.attachment.url(imageObject, { size: 'one-sixth'}) }}"
     }
 </script>
+<link rel="shortcut icon" type="image/png" href="{{ apos.attachment.url(imageObject, { size: 'one-sixth'}) }}" />
+
