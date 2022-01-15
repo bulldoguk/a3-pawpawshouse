@@ -1,5 +1,8 @@
+const serverSettings = require("./data/serverSettings");
+
 require('apostrophe')({
-  shortName: 'a3-bulldoguk-boilerplate',
+  shortName: 'a3-pawpawshouse',
+  baseUrl: serverSettings.baseUrl,
   modules: {
     // Apostrophe module configuration
     // *******************************

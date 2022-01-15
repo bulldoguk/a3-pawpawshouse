@@ -1,0 +1,32 @@
+{% if data.page and data.page._ancestors.length %}
+{% set index = 1 %}
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {% for page in data.page._ancestors %}
+      {
+        "@type": "ListItem",
+        "position": {{ index }},
+        "name": "{{ page.title }}",
+        "item": "{{ page._url }}"
+      },
+      {% set index = index + 1 %}
+      {% endfor %}
+
+      {
+        "@type": "ListItem",
+        "position": {{ index }},
+      {% if data.piece %} {# We're rendering a show page. #}
+        "name": "{{ data.page.title }}",
+        "item":"{{ data.page._url }}"
+      {% else %} {# We're rendering a normal page. #}
+        "name": "{{ data.page.title }}",
+        "item":""
+      {% endif %}
+      }]
+    }
+    </script>
+{% endif %}

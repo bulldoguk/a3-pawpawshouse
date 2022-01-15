@@ -9,6 +9,13 @@
   {% endif %}
 {% endblock %}
 
+{% block extraHead %}
+  {# breadcrumb richtext code #}
+  {% include "pageHead/logoRichText.html" %}
+  {% include "pageHead/searchRichText.html" %}
+  {% include "pageHead/breadcrumbRichText.html" %}
+{% endblock %}
+
 {% block beforeMain %}
 <div class="bp-wrapper">
   <header class="bp-header">
