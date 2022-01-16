@@ -1,0 +1,17 @@
+{% block header %}
+<nav>
+  <div
+    class="flex flex-row items-center justify-between gap-2 py-4 md:p-5 bg-{{ data.global.navBGColor }} shadow-lg"
+  >
+    <div>
+      {% include "header/title.html" %}
+    </div>
+    <div class="flex flex-col md:block hidden">
+      <div class="flex justify-end">{% include "header/search.html" %}</div>
+      {% include "header/desktopNav.html" %}
+    </div>
+    header/hamburgerNavBtn.html
+  </div>
+  <div class="">header/hamburgerNav.html</div>
+</nav>
+{% endblock %}

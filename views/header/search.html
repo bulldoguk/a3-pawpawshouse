@@ -1,0 +1,8 @@
+{% block searchBox %}
+<div class="w-min whitespace-nowrap align-right border-2 rounded-lg bg-{{ data.global.navBGColor }}">
+  <form method="GET" action="/search">
+    <input type="text" name="q" />
+    <input type="submit" value="Search" />
+  </form>
+</div>
+{% endblock %}

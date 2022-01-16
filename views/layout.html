@@ -17,15 +17,7 @@
 {% endblock %}
 
 {% block beforeMain %}
-<div class="bp-wrapper">
-  <header class="bp-header">
-    <img class="bp-header__logo" src="/images/logo.png" alt="ApostropheCMS logo">
-    <nav class="bp-nav"></nav>
-    {% if not data.user %}
-      <a class="bp-button bp-header__login" href="/login">Login</a>
-    {% endif %}
-  </header>
-  <main class="bp-main">
+{% include "header/index.html" %}
 {% endblock %}
 
 {% block main %}

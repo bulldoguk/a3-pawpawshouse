@@ -1,0 +1,28 @@
+<div class="flex items-center flex-row flex-nowrap">
+    <style>
+      .bp-image-widget {
+        border-radius: 9999px;
+      }
+    </style>
+    <a href="/" class="bg-{{ data.global.iconBGColor }} rounded-full">
+      {% area data.global, 'logo' with { '@apostrophecms/image': { sizes:
+      '(min-width: 250px) 75px' } } %}
+    </a>
+    <a href="/" class="whitespace-nowrap md:pt-4 pt-0">
+      <span
+        class="uppercase align-middle hidden lg:block text-5xl text-{{ data.global.navTextColor }} whitespace-nowrap"
+      >
+        {{ data.global.maintitle }}
+      </span>
+      <span
+        class="uppercase align-middle lg:hidden text-xl md:text-3xl text-{{ data.global.navTextColor }} whitespace-nowrap"
+      >
+        {{ data.global.shorttitle }}
+      </span>
+      <div
+        class="align-left text-sm md:text-md lg:text-lg text-muted text-{{ data.global.navTextColor }} capitalize italic"
+      >
+        {{ data.global.tagline }}
+      </div>
+    </a>
+  </div>
