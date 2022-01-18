@@ -22,7 +22,7 @@
       <div
         class="align-left text-sm md:text-md lg:text-lg text-muted text-{{ data.global.navTextColor }} capitalize italic"
       >
-        {{ data.global.tagline }}
+        {{ data.global.tagline | truncate(30) }}
       </div>
     </a>
   </div>
