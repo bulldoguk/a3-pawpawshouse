@@ -1,5 +1,5 @@
 {% block header %}
-<nav>
+<nav class="md:pb-4">
   <div
     class="flex flex-row items-center justify-between gap-2 py-4 md:p-5 bg-{{ data.global.navBGColor }} shadow-lg"
   >
@@ -10,8 +10,8 @@
       <div class="flex justify-end">{% include "header/search.html" %}</div>
       {% include "header/desktopNav.html" %}
     </div>
-    header/hamburgerNavBtn.html
+    {% include "header/hamburgerNavBtn.html" %}
   </div>
-  <div class="">header/hamburgerNav.html</div>
+  <div class="">{% include "header/hamburgerNav.html" %}</div>
 </nav>
 {% endblock %}

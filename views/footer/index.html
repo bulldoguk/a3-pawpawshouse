@@ -1,0 +1,68 @@
+{% block footer %}
+<footer class="flex flex-col bg-{{ data.global.footerBGColor }} text-{{ data.global.footerTextColor }}">
+  <div class="flex flex-col gap-2 md:grid md:grid-cols-3">
+    <div class="flex flex-col gap-2 px-4">
+      <div class="text-center uppercase">
+        <h3>Main campus</h3>
+        <div>
+          <a href="//" target="_blank">
+            <i class="fa fa-map-marker px-2"></i>AddressLine
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row justify-around py-4 px-4">
+      {% if data.global.facebookurl %}
+      <a href="{{ data.global.facebookurl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-facebook"></i
+      ></a>
+      {% endif %} {% if data.global.twitterurl %}
+      <a href="{{ data.global.twitterurl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-twitter"></i
+      ></a>
+      {% endif %} {% if data.global.linkedinurl %}
+      <a href="{{ data.global.linkedinurl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+      {% endif %} {% if data.global.instagramurl %}
+      <a href="{{ data.global.instagramurl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-instagram"></i
+      ></a>
+      {% endif %} {% if data.global.vimeourl %}
+      <a href="{{ data.global.vimeourl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-vimeo"></i
+      ></a>
+      {% endif %} {% if data.global.youtubeurl %}
+      <a href="{{ data.global.youtubeurl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-youtube"></i
+      ></a>
+      {% endif %} {% if data.global.podcasturl %}
+      <a href="{{ data.global.podcasturl }}" target="_blank" class="text-5xl"
+        ><i class="fa fa-podcast"></i
+      ></a>
+      {% endif %}
+    </div>
+    <div class="flex flex-col gap-2 px-4 text-right">
+      &nbsp;
+    </div>
+  </div>
+  <div class="grid grid-cols-12 border-t-2 border-gray-800 py-4 mx-4">
+    <div class="">&nbsp;</div>
+    <div class="col-span-10 text-center uppercase text-xs text-muted">
+      <a href="https://pawpawshouse.com" target="_blank"
+        >Built and Maintained at PawPawsHouse.com</a
+      >
+    </div>
+    <div class="flex justify-end">
+      <a href="/login">
+        <img
+          class="p-1 rounded-lg bg-gray-300 hover:bg-gray-500"
+          src="/images/pi-mathematical-constant-symbol.png"
+          height="24"
+          width="24"
+        />
+      </a>
+    </div>
+  </div>
+</footer>
+{% endblock %}

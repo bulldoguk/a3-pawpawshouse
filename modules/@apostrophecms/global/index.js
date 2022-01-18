@@ -43,15 +43,29 @@ module.exports = {
         help: "Tailwindcss color for nav icon",
         type: "string",
       },
+      footerBGColor: {
+        label: "Nav background color",
+        help: "Tailwindcss color for nav background",
+        type: "string",
+      },
+      footerTextColor: {
+        label: "Nav text background color",
+        help: "Tailwindcss color for nav text",
+        type: "string",
+      },
     },
     group: {
       basics: {
         label: "Basics",
         fields: ["maintitle", "shorttitle", "tagline", "logo"],
       },
-      colors: {
-        label: "Colors",
+      headerColors: {
+        label: "Header Colors",
         fields: ["navBGColor", "iconBGColor", "navTextColor"],
+      },
+      footerColors: {
+        label: "Footer Colors",
+        fields: ["footerBGColor", "footerTextColor"],
       },
     },
   },

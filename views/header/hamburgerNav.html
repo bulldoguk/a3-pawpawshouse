@@ -1,0 +1,15 @@
+{% block hamburgerNav %}
+<div class="hidden mobile-menu w-full bg-{{ data.global.navBGColor }} text-right">
+  <ul class="">
+    {# 👇 Referencing `data.home._children` and looping over them. #} {% for
+    page in data.home._children %}
+    <li class="pr-4 py-2">
+      <a href="{{ page._url }}" class="text-{{ data.global.navTextColor }}">{{ page.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="px-2 justify-end flex flex-row ">
+    {% include 'header/search.html' %}
+  </div>
+</div>
+{% endblock %}
