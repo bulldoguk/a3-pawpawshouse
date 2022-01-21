@@ -20,7 +20,12 @@
         {{ data.global.shorttitle }}
       </span>
       <div
-        class="align-left text-sm md:text-md lg:text-lg text-muted text-{{ data.global.navTextColor }} capitalize italic"
+        class="hidden md:block align-left text-sm md:text-md lg:text-lg text-muted text-{{ data.global.navTextColor }} capitalize italic"
+      >
+        {{ data.global.tagline | truncate(150) }}
+      </div>
+      <div
+        class="block md:hidden align-left text-sm md:text-md lg:text-lg text-muted text-{{ data.global.navTextColor }} capitalize italic"
       >
         {{ data.global.tagline | truncate(30) }}
       </div>
