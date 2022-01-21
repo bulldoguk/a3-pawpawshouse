@@ -1,11 +1,15 @@
 module.exports = {
-  future: {
-    purgeLayersByDefault: true,
+  content: {
+    files: ["./modules/**/*.{html,scss,js}"],
   },
-  purge: {
-    content: ["./**/*.html", "./**/*.scss", "./**/*.js"],
-  },
-  darkMode: false, // or 'media' or 'class'
+  safelist: [
+    'bg-red-500',
+    'text-3xl',
+    'lg:text-4xl',
+    {
+      pattern: /bg-(gray|green|blue)-(100|200|300|400|500)/,
+    },
+  ],
   theme: {},
   variants: {
     extend: {},

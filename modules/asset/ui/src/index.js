@@ -5,8 +5,9 @@ export default () => {
   // To drive hamburger menu
   const btn = document.querySelector("img.mobile-menu-button");
   const menu = document.querySelector(".mobile-menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
+  if (btn) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
 };
