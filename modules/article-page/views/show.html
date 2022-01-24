@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <h1>{{ data.piece.title }}</h1>
+  <section>
+    {% area data.piece, 'bodycontent' %}
+  </section>
+{% endblock %}

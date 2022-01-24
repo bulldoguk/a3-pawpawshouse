@@ -34,7 +34,9 @@ require("apostrophe")({
     // The project's first custom page type.
     "default-page": {},
     // blog articles
-    "@bulldoguk/article": {},
-    "@bulldoguk/article-page": {},
+    article: {},
+    "article-page": {},
+    // Utility widgets
+    "two-column-widget": {},
   },
 });

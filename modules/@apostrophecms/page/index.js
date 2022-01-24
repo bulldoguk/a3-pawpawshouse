@@ -13,7 +13,7 @@ module.exports = {
         label: "Home",
       },
       {
-        name: "@bulldoguk/article-page",
+        name: "article-page",
         label: "Articles",
       },
     ],
