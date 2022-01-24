@@ -5,13 +5,17 @@ module.exports = {
   options: {
     types: [
       {
-        name: 'default-page',
-        label: 'Default'
+        name: "default-page",
+        label: "Default",
       },
       {
-        name: '@apostrophecms/home-page',
-        label: 'Home'
-      }
-    ]
-  }
+        name: "@apostrophecms/home-page",
+        label: "Home",
+      },
+      {
+        name: "@bulldoguk/article-page",
+        label: "Articles",
+      },
+    ],
+  },
 };
