@@ -38,5 +38,6 @@ require("apostrophe")({
     "article-page": {},
     // Utility widgets
     "two-column-widget": {},
+    "code-widget": {},
   },
 });

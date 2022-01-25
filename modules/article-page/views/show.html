@@ -1,8 +1,6 @@
-{% extends "layout.html" %}
-
-{% block main %}
+{% extends "layout.html" %} {% block main %}
+<div class="container mx-auto max-w-screen-lg">
   <h1>{{ data.piece.title }}</h1>
-  <section>
-    {% area data.piece, 'bodycontent' %}
-  </section>
+  <section>{% area data.piece, 'bodycontent' %}</section>
+</div>
 {% endblock %}

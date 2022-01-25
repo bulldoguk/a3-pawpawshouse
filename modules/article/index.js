@@ -1,26 +1,25 @@
-const dayjs = require('dayjs');
+const dayjs = require("dayjs");
 
-const filters = require('./filters');
-const queries = require('./queries');
+const filters = require("./filters");
+const queries = require("./queries");
 
 module.exports = {
-  extend: '@apostrophecms/piece-type',
+  extend: "@apostrophecms/piece-type",
   options: {
-    label: 'bdArticle:label',
-    pluralLabel: 'bdArticle:pluralLabel',
+    label: "bdArticle:label",
+    pluralLabel: "bdArticle:pluralLabel",
     sort: { title: 1 },
     i18n: {
-      ns: 'bdArticle',
-      browser: true
-    }
+      ns: "bdArticle",
+      browser: true,
+    },
   },
-  columns: {
-  },
+  columns: {},
   fields: {
     add: {
       bodycontent: {
-        label: 'bdArticle:content',
-        type: 'area',
+        label: "bdArticle:content",
+        type: "area",
         options: {
           widgets: {
             "@apostrophecms/image": {},
@@ -28,23 +27,19 @@ module.exports = {
             "@apostrophecms/rich-text": {},
             "@apostrophecms/oembed": {},
             "two-column": {},
+            code: {},
           },
         },
-      }
+      },
     },
     group: {
       basics: {
-        fields: [
-          'title',
-          'bodycontent',
-        ]
+        fields: ["title", "bodycontent"],
       },
-    }
+    },
   },
-  handlers(self, options) {
-  },
-  methods(self, options) {
-  },
+  handlers(self, options) {},
+  methods(self, options) {},
   filters,
-  queries
+  queries,
 };
