@@ -38,19 +38,27 @@ module.exports = {
         help: "Tailwindcss color for nav text",
         type: "string",
       },
+      navTextHoverClass: {
+        label: "Nav text hover class",
+        type: "string",
+      },
       iconBGColor: {
         label: "Icon background color",
         help: "Tailwindcss color for nav icon",
         type: "string",
       },
       footerBGColor: {
-        label: "Nav background color",
-        help: "Tailwindcss color for nav background",
+        label: "Footer background color",
+        help: "Tailwindcss color for footer background",
         type: "string",
       },
       footerTextColor: {
-        label: "Nav text background color",
-        help: "Tailwindcss color for nav text",
+        label: "Footer text background color",
+        help: "Tailwindcss color for footer text",
+        type: "string",
+      },
+      footerTextHoverClass: {
+        label: "Footer text hover class",
         type: "string",
       },
     },
@@ -61,11 +69,16 @@ module.exports = {
       },
       headerColors: {
         label: "Header Colors",
-        fields: ["navBGColor", "iconBGColor", "navTextColor"],
+        fields: [
+          "navBGColor",
+          "iconBGColor",
+          "navTextColor",
+          "navTextHoverClass",
+        ],
       },
       footerColors: {
         label: "Footer Colors",
-        fields: ["footerBGColor", "footerTextColor"],
+        fields: ["footerBGColor", "footerTextColor", "footerTextHoverClass"],
       },
     },
   },

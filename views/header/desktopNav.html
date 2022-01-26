@@ -8,7 +8,7 @@
   {# 👇 Referencing `data.home._children` and looping over them. #} {% for page
   in data.home._children %}
   <li class="dropdown relative">
-    <a href="{{ page._url }}" class="text-white whitespace-nowrap"
+    <a href="{{ page._url }}" class="text-white whitespace-nowrap hover:{{ data.global.navTextHoverClass }}"
       >{{ page.title }}</a
     >
     {% if page._children.length %}
