@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block main %}
+<div class="container mx-auto w-11/12 max-w-screen-lg">
+  <div class="flex justify-center mx-auto my-4">
+    <div class="mb-3 xl:w-96">
+      <div
+        class="input-group relative flex flex-wrap items-stretch w-full mb-4"
+      >
+        <form
+          data-apos-search-page-form
+          method="GET"
+          action="{{ data.url | e }}#main"
+        >
+          {% if data.filters %}
+          <div class="ld-meta">{{ __t('apostrophe:filterResultsByType') }}</div>
+          <ul>
+            {% for filter in data.filters %}
+            <li>
+              <input
+                data-apos-search-filter
+                type="checkbox"
+                name="{{ filter.name | e }}"
+                {%
+                if
+                filter.value
+                %}checked{%
+                endif
+                %}
+                value="1"
+              />{{ filter.label | e }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          <div class="flex flex-row">
+            <input
+              type="search"
+              class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="button-addon3"
+              data-apos-search-field
+              value="{{ data.query.q | e }}"
+              name="q"
+            />
+            <input
+              class="btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              type="submit"
+              value="Search"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center mx-auto">
+    <div class="bg-white rounded-lg border border-gray-200 w-96 text-gray-900">
+      {% for doc in data.docs %}
+      <button
+        type="button"
+        class="
+        text-left
+        px-6
+        py-2
+        border-b border-gray-200
+        w-full
+        hover:bg-gray-100 hover:text-gray-500
+        focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600
+        transition
+        duration-500
+        cursor-pointer
+      "
+      >
+        <h4>
+          {% if doc._url %}<a href="{{ doc._url }}"
+            >{% endif %}{{ doc.title }}{% if doc._url %}</a
+          >{% endif %}
+        </h4>
+      </button>
+      {% endfor %}
+    </div>
+    {% include "pager.html" %}
+  </div>
+</div>
+{% endblock %}

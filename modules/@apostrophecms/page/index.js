@@ -17,5 +17,15 @@ module.exports = {
         label: "Articles",
       },
     ],
+    park: [
+      {
+        parkedId: "searchPageId",
+        title: "Search",
+        slug: "/search",
+        type: "@apostrophecms/search",
+        label: "Search",
+        orphan: true,
+      },
+    ],
   },
 };

@@ -13,6 +13,20 @@ require("apostrophe")({
     // Any modules that are not present by default in Apostrophe must at least
     // have a minimal configuration here to turn them on: `moduleName: {}`
     // ***********************************************************************
+    // Enable search
+    "@apostrophecms/search": {},
+    // Sitemap apostrophecms/sitemap
+    "@apostrophecms/sitemap": {},
+    // Apostrophe SEO module
+    "@apostrophecms/seo": {},
+    // For Facebook's open-graph stuff
+    "@apostrophecms/open-graph": {},
+    // Add SEO global library
+    "@apostrophecms/global": {
+      options: {
+        seoGoogleTagManager: true,
+      },
+    },
     // `className` options set custom CSS classes for Apostrophe core widgets.
     "@apostrophecms/rich-text-widget": {
       options: {
