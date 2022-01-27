@@ -17,8 +17,8 @@ module.exports = (self, query) => {
 
           query.and({
             $and: [
-              { createdAt: { $lte: year + '-12-31' } },
-              { createdAt: { $gte: year + '-01-01' } }
+              { createdAt: { $lte: new Date(year + '-12-31') } },
+              { createdAt: { $gte: new Date(year + '-01-01') } }
             ]
           });
         },
@@ -62,8 +62,8 @@ module.exports = (self, query) => {
 
           query.and({
             $and: [
-              { createdAt: { $lte: month + '-31' } },
-              { createdAt: { $gte: month + '-01' } }
+              { createdAt: { $lte: new Date(month + '-31') } },
+              { createdAt: { $gte: new Date(month + '-01') } }
             ]
           });
         },
@@ -96,7 +96,6 @@ module.exports = (self, query) => {
             }
           }
           months.sort().reverse();
-          console.log('Months', months)
           return months;
         }
       },
@@ -115,8 +114,8 @@ module.exports = (self, query) => {
 
           query.and({
             $and: [
-              { createdAt: { $lte: day } },
-              { createdAt: { $gte: day } }
+              { createdAt: { $lte: new Date(day + 'T23:59:59Z') } },
+              { createdAt: { $gte: new Date(day + 'T00:00:00Z') } }
             ]
           });
         },
@@ -138,10 +137,16 @@ module.exports = (self, query) => {
             label: 'bdArticle:filterAll'
           } ];
           for (const eachDate of allDates) {
-            if (!days.find(e => e.value === eachDate)) {
+            const thisMonth = eachDate.getMonth()+1
+            let month = thisMonth <= 9 ? '0' + thisMonth.toString() : thisMonth.toString()
+            month = eachDate.getFullYear() + '-' + month
+            let day = eachDate.getDate().toString()
+            if (day.length < 2) { day = '0' + day }
+            const choiceDate = month + '-' + day
+            if (!days.find(e => e.value === choiceDate)) {
               days.push({
-                value: eachDate,
-                label: eachDate
+                value: choiceDate,
+                label: choiceDate
               });
             }
           }

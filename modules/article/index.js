@@ -8,7 +8,7 @@ module.exports = {
   options: {
     label: "bdArticle:label",
     pluralLabel: "bdArticle:pluralLabel",
-    sort: { title: 1 },
+    sort: { createdAt: -1 },
     i18n: {
       ns: "bdArticle",
       browser: true,
