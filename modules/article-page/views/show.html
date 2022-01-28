@@ -3,4 +3,11 @@
   <h1>{{ data.piece.title }}</h1>
   <section>{% area data.piece, 'bodycontent' %}</section>
 </div>
+<div class="w-full border-t-2">
+  <ul class="container mx-auto max-w-screen-lg flex flex-col">
+    <li>Author: {{ data.piece.updatedBy.title | capitalize }}</li>
+    <li>Created: {{ data.piece.createdAt | date('MMM, DD YYYY') }}</li>
+    <li>Updated: {{ data.piece.updatedAt | date('MMM, DD YYYY') }}</li>
+  </ul>
+</div>
 {% endblock %}

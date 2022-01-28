@@ -4,17 +4,20 @@ data.page.title }}{% endblock %} {% block main %}
 <div class="container mx-auto max-w-screen-lg">
   <div class="grid grid-cols-3">
     <div class="">
-      <h2>{{ __t('bdArticle:filters') }}</h2>
+      <h2>{{ __t('bdArticle:filters') | capitalize }}</h2>
       {% render filters.render({ filters: data.piecesFilters, query: data.query,
       url: data.page._url }) %}
     </div>
     <div class="col-span-2">
       <h2>{{ __t('bdArticle:pluralLabel') }}</h2>
       {% for piece in data.pieces %}
-      <article>
-        <h3>
-          <a href="{{ piece._url }}">{{ piece.title }}</a>
-        </h3>
+      <article class="flex-grow w-full border-2 rounded-lg p-2 my-4 shadow-lg hover:shadow-xl hover:-translate-y-2">
+        <div class="flex-grow max-w-full">
+          <h3 class="mb-0">
+            <a href="{{ piece._url }}">{{ piece.title }}</a>
+          </h3>
+          <div class="text-sm text-muted">{{ piece.updatedBy.title | capitalize }} - {{ piece.createdAt | date('MMM, DD YYYY') }}</div>
+        </div>
         <p>{{ piece.searchSummary | truncate(150) }}</p>
       </article>
       {% endfor %}
