@@ -11,7 +11,7 @@ data.page.title }}{% endblock %} {% block main %}
     <div class="col-span-2">
       <h2>{{ __t('bdArticle:pluralLabel') }}</h2>
       {% for piece in data.pieces %}
-      <article class="flex-grow w-full border-2 rounded-lg p-2 my-4 shadow-lg hover:shadow-xl hover:-translate-y-2">
+      <article class="flex-grow w-full border-2 rounded-lg p-2 my-4 shadow-lg hover:shadow-xl hover:-translate-y-2 animate-fade-in-up">
         <div class="flex-grow max-w-full">
           <h3 class="mb-0">
             <a href="{{ piece._url }}">{{ piece.title }}</a>
