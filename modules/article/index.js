@@ -42,4 +42,19 @@ module.exports = {
   methods(self, options) {},
   filters,
   queries,
+  components(self) {
+    return {
+      // Returning the five most recently created articles.
+      async latest(req, data) {
+        const articles = await self
+          .find(req)
+          .sort({ createdAt: data.sort || 1 })
+          .limit(data.max || 5)
+          .toArray();
+        return {
+          articles,
+        };
+      },
+    };
+  },
 };
