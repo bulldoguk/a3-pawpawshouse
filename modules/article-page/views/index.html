@@ -16,7 +16,7 @@ data.page.title }}{% endblock %} {% block main %}
           <h3 class="mb-0">
             <a href="{{ piece._url }}">{{ piece.title }}</a>
           </h3>
-          <div class="text-sm text-muted">{{ piece.updatedBy.title | capitalize }} - {{ piece.createdAt | date('MMM, DD YYYY') }}</div>
+          <div class="text-sm text-muted">{{ piece.updatedBy.title | title }} - {{ piece.createdAt | date('MMM, DD YYYY') }}</div>
         </div>
         <p>{{ piece.searchSummary | truncate(150) }}</p>
       </article>

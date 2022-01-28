@@ -5,7 +5,7 @@
 </div>
 <div class="w-full border-t-2">
   <ul class="container mx-auto max-w-screen-lg flex flex-col">
-    <li>Author: {{ data.piece.updatedBy.title | capitalize }}</li>
+    <li>Author: {{ data.piece.updatedBy.title | title }}</li>
     <li>Created: {{ data.piece.createdAt | date('MMM, DD YYYY') }}</li>
     <li>Updated: {{ data.piece.updatedAt | date('MMM, DD YYYY') }}</li>
   </ul>
