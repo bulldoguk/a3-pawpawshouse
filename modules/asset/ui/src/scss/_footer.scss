@@ -1,0 +1,9 @@
+footer {
+    @apply bg-black;
+    @apply text-white;
+}
+
+footer img {
+    @apply bg-gray-300;
+    @apply hover:bg-gray-500;
+}
