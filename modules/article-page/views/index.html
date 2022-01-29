@@ -2,12 +2,12 @@
 '@apostrophecms/pager:macros.html' as pager with context %} {% block main %}
 <div class="container mx-auto max-w-screen-lg">
   <div class="grid grid-cols-3">
-    <div class="">
+    <div class="hidden md:block">
       <h2>{{ __t('bdArticle:filters') | capitalize }}</h2>
       {% render filters.render({ filters: data.piecesFilters, query: data.query,
       url: data.page._url }) %}
     </div>
-    <div class="col-span-2">
+    <div class="col-span-3 md:col-span-2">
       <h2>{{ __t('bdArticle:pluralLabel') }}</h2>
       {% for piece in data.pieces %}
       <article class="flex-grow w-full border-2 rounded-lg p-2 my-4 shadow-lg hover:shadow-xl hover:-translate-y-2 animate-fade-in-up">
