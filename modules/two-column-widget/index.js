@@ -7,6 +7,15 @@ module.exports = {
   // 👇 The widget type's field schema
   fields: {
     add: {
+      reverse: {
+        type: 'select',
+        label: 'Reverse',
+        def: false,
+        choices: [
+          { label: 'Normal', value: false },
+          { label: 'Reverse', value: true }
+        ]
+      },
       // 👇 The first column area
       columnOne: {
         type: "area",

@@ -1,0 +1,26 @@
+about ul {
+  list-style-type: square;
+}
+
+about .bp-rich-text {
+  background-color: #e5eff3;
+  @apply rounded-xl;
+  @apply p-4;
+  @apply text-black;
+}
+
+about .columnOne .bp-rich-text {
+  @apply rounded-xl;
+  @apply shadow-xl;
+  @apply p-4;
+  @apply text-white;
+  background-color: #669cba;
+}
+
+about .columnTwo .bp-rich-text {
+  @apply text-white;
+  @apply rounded-xl;
+  @apply shadow-xl;
+  @apply p-4;
+  background-color: #203864;
+}

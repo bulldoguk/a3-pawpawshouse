@@ -1,9 +1,18 @@
 {# modules/two-column-widget/views/widget.html #}
 <section class="flex flex-col md:grid md:grid-cols-2 gap-6 py-2">
-  <div class="">
-    {% area data.widget, 'columnOne' %}
-  </div>
-  <div class="">
-    {% area data.widget, 'columnTwo' %}
-  </div>
+  {% if data.widget.reverse %}
+  <section class="columnTwo">
+    <div class="">{% area data.widget, 'columnTwo' %}</div>
+  </section>
+  <section class="columnOne">
+    <div class="">{% area data.widget, 'columnOne' %}</div>
+  </section>
+  {% else %}
+  <section class="columnOne">
+    <div class="">{% area data.widget, 'columnOne' %}</div>
+  </section>
+  <section class="columnTwo">
+    <div class="">{% area data.widget, 'columnTwo' %}</div>
+  </section>
+  {% endif %}
 </section>
