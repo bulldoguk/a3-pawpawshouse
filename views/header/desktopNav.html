@@ -8,14 +8,14 @@
   {# 👇 Referencing `data.home._children` and looping over them. #} {% for page
   in data.home._children %}
   <li class="dropdown relative">
-    <a href="{{ page._url }}" class="text-white whitespace-nowrap hover:{{ data.global.navTextHoverClass }}"
+    <a href="{{ page._url }}" class="whitespace-nowrap"
       >{{ page.title }}</a
     >
     {% if page._children.length %}
-    <ul class="hidden dropdown-content absolute bg-gray-700 p-1 -ml-6">
+    <ul class="hidden dropdown-content absolute p-1 -ml-6">
       {% for childpage in page._children %}
       <li class="text-white">
-        <a href="{{ childpage._url }}" class="hover:text-yellow-500 whitespace-nowrap"
+        <a href="{{ childpage._url }}" class="whitespace-nowrap"
           >{{ childpage.title }}</a
         >
       </li>

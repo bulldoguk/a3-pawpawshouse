@@ -1,0 +1,11 @@
+nav div, nav ul {
+    @apply bg-gray-300;
+}
+
+nav a {
+    @apply text-black;
+}
+
+nav a:hover {
+    @apply text-yellow-500;
+}

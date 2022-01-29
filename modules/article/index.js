@@ -48,7 +48,7 @@ module.exports = {
       async latest(req, data) {
         const articles = await self
           .find(req)
-          .sort({ createdAt: data.sort || 1 })
+          .sort({ createdAt: data.sort || -1 })
           .limit(data.max || 5)
           .toArray();
         return {

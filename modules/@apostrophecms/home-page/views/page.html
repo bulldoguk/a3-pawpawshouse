@@ -10,6 +10,7 @@ template that lives in the top-level views/ folder for convenience #} {% extends
       >
         <h1>Welcome!</h1>
       </div>
+      <section>{% area data.page, 'bodycontent' %}</section>
     </div>
     <!-- latest articles list -->
     <div class="">{% component 'article:latest' with { max: 10 } %}</div>
