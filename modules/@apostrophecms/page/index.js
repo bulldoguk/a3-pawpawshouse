@@ -26,6 +26,14 @@ module.exports = {
         label: "Search",
         orphan: true,
       },
+      {
+        parkedId: "aboutPageId",
+        title: "About",
+        slug: "/about",
+        type: "about-page",
+        label: "Who is PawPaw",
+        orphan: false,
+      },
     ],
   },
 };

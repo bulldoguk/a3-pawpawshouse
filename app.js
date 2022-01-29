@@ -50,6 +50,8 @@ require("apostrophe")({
     // blog articles
     article: {},
     "article-page": {},
+    // Profile page
+    "about-page": {},
     // Utility widgets
     "two-column-widget": {},
     "code-widget": {},
