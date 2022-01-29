@@ -1,11 +1,16 @@
-nav div, nav ul {
-    @apply bg-gray-300;
+nav div,
+nav ul {
+  @apply bg-gray-300;
 }
 
 nav a {
-    @apply text-black;
+  @apply text-black;
 }
 
 nav a:hover {
-    @apply text-yellow-500;
+  @apply text-yellow-500;
+}
+
+nav .bp-image-widget {
+  @apply bg-gray-100;
 }
