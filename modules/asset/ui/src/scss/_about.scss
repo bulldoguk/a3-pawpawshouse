@@ -2,6 +2,11 @@ about ul {
   list-style-type: square;
 }
 
+about a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 about .bp-rich-text {
   background-color: #e5eff3;
   @apply rounded-xl;
@@ -23,9 +28,4 @@ about .columnTwo .bp-rich-text {
   @apply shadow-xl;
   @apply p-4;
   background-color: #203864;
-}
-
-about a {
-  text-decoration: underline;
-  @apply: cursor-pointer;
 }
