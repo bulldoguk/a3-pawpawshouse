@@ -24,3 +24,8 @@ about .columnTwo .bp-rich-text {
   @apply p-4;
   background-color: #203864;
 }
+
+about a {
+  text-decoration: underline;
+  @apply: cursor-pointer;
+}

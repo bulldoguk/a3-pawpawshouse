@@ -27,58 +27,11 @@ module.exports = {
           },
         },
       },
-      // Colors
-      navBGColor: {
-        label: "Nav background color",
-        help: "Tailwindcss color for nav background",
-        type: "string",
-      },
-      navTextColor: {
-        label: "Nav text background color",
-        help: "Tailwindcss color for nav text",
-        type: "string",
-      },
-      navTextHoverClass: {
-        label: "Nav text hover class",
-        type: "string",
-      },
-      iconBGColor: {
-        label: "Icon background color",
-        help: "Tailwindcss color for nav icon",
-        type: "string",
-      },
-      footerBGColor: {
-        label: "Footer background color",
-        help: "Tailwindcss color for footer background",
-        type: "string",
-      },
-      footerTextColor: {
-        label: "Footer text background color",
-        help: "Tailwindcss color for footer text",
-        type: "string",
-      },
-      footerTextHoverClass: {
-        label: "Footer text hover class",
-        type: "string",
-      },
     },
     group: {
       basics: {
         label: "Basics",
         fields: ["maintitle", "shorttitle", "tagline", "logo"],
-      },
-      headerColors: {
-        label: "Header Colors",
-        fields: [
-          "navBGColor",
-          "iconBGColor",
-          "navTextColor",
-          "navTextHoverClass",
-        ],
-      },
-      footerColors: {
-        label: "Footer Colors",
-        fields: ["footerBGColor", "footerTextColor", "footerTextHoverClass"],
       },
     },
   },
