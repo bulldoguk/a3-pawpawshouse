@@ -13,7 +13,7 @@ template that lives in the top-level views/ folder for convenience #} {% extends
       <section>{% area data.page, 'bodycontent' %}</section>
     </div>
     <!-- latest articles list -->
-    <div class="">{% component 'article:latest' with { max: 10 } %}</div>
+    <div class="">{% component 'article:latest' with { max: 5 } %}</div>
   </div>
 </div>
 {% endblock %}

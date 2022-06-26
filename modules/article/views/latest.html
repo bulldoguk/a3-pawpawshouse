@@ -4,13 +4,13 @@
     <article
       class="flex-grow w-full border-2 rounded-lg p-2 shadow-lg hover:shadow-xl hover:-translate-y-2 animate-fade-in-up"
     >
-      <div class="grid grid-cols-3 w-full gap-2">
+      <div class="flex flex-row w-full gap-2">
         <div>
           <h6>
             <a href="{{ article._url }}">{{ article.title }}</a>
           </h3>
         </div>
-        <div class="col-span-2">
+        <div class="flex-grow">
           <p class="text-sm">{{ article.searchSummary | truncate(75) }}</p>
           <div class="text-xs text-muted">
             {{ article.createdAt | date('MMM, DD YYYY') }}
