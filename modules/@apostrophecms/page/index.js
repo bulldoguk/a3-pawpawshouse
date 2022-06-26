@@ -16,6 +16,10 @@ module.exports = {
         name: "article-page",
         label: "Articles",
       },
+      {
+        name: "letter-page",
+        label: "Prose",
+      },
     ],
     park: [
       {

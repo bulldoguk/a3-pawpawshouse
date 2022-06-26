@@ -25,7 +25,6 @@ module.exports = {
             "@apostrophecms/image": {},
             "@apostrophecms/video": {},
             "@apostrophecms/rich-text": {},
-            "@apostrophecms/oembed": {},
             "two-column": {},
             code: {},
           },

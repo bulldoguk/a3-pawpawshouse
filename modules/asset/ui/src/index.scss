@@ -67,6 +67,9 @@
     @apply bg-gray-300;
     @apply hover:bg-yellow-400;
   }
+  .prose a {
+    @apply underline hover:bg-yellow-400;
+  }
   code {
     @apply shadow-xl;
     background-color:#EEEEEE;

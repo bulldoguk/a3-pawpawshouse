@@ -52,6 +52,8 @@ require("apostrophe")({
     "article-page": {},
     // Profile page
     "about-page": {},
+    // For prose type pages
+    "letter-page": {},
     // Utility widgets
     "two-column-widget": {},
     "code-widget": {},

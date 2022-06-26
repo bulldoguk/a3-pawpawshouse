@@ -24,7 +24,6 @@ module.exports = {
           widgets: {
             "@apostrophecms/rich-text": {},
             "@apostrophecms/image": {},
-            "@apostrophecms/oembed": {},
             "two-column": {},
             code: {},
           },
@@ -38,7 +37,6 @@ module.exports = {
           widgets: {
             "@apostrophecms/rich-text": {},
             "@apostrophecms/image": {},
-            "@apostrophecms/oembed": {},
             "two-column": {},
             code: {},
           },

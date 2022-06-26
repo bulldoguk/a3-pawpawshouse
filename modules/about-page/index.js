@@ -9,7 +9,6 @@ module.exports = {
           widgets: {
             "@apostrophecms/rich-text": {},
             "@apostrophecms/image": {},
-            "@apostrophecms/oembed": {},
             "two-column": {},
             code: {},
           },
