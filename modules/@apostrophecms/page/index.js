@@ -35,7 +35,7 @@ module.exports = {
         title: "About",
         slug: "/about",
         type: "about-page",
-        label: "Who is PawPaw",
+        label: "Who am I",
         orphan: false,
       },
     ],
